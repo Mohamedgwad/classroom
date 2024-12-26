@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Google Classroom</title>
+  </head>
+
+  <body>
+    <!-- Topbar -->
+    <div class="topbar">
+      <div class="nav-container">
+        <div class="nav">
+          <img class="navp" src="/image/interface_12383011.png" alt="Menu" />
+        </div>
+        <div class="sidebar">
+          <a href="/main/main.html" class="sidebar-item active">
+            <i class="material-icons">home</i>
+            <span>Home</span>
+          </a>
+          <a href="#" class="sidebar-item">
+            <i class="material-icons">calendar_today</i>
+            <span>Calendar</span>
+          </a>
+          <a href="#" class="sidebar-item">
+            <i class="material-icons">notifications</i>
+            <span>Notifications</span>
+          </a>
+          <a href="#" class="sidebar-item">
+            <i class="material-icons">archive</i>
+            <span>Archived classes</span>
+          </a>
+          <a href="#" class="sidebar-item">
+            <i class="material-icons">settings</i>
+            <span>Settings</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="logo">
+        <img
+          class="logop"
+          src="/image/86dd2927-11ea-4f1b-a8b2-cdf238b9dd26.png"
+          alt="Logo"
+        />
+        <p class="logot"><a href="/main/main.html" class="place-link">Classroom</a></p>
+      </div>
+
+      <div class="place">
+        <img
+          class="place-arrow"
+          src="/image/arrow-point-to-right.png"
+          alt="Arrow"
+        />
+        <span class="placet">Place</span>
+      </div>
+
+      <!-- Theme Switch -->
+      <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+          <input type="checkbox" id="checkbox" />
+          <div class="slider round">
+            <span class="material-icons light">light_mode</span>
+            <span class="material-icons dark">dark_mode</span>
+          </div>
+        </label>
+      </div>
+
+      <div class="apps">
+        <img class="apps" src="/image/al-icon.png" alt="Apps" />
+      </div>
+
+      <div class="namelogo">
+        <img class="namelogo" src="/image/unnamed.png" alt="Profile" />
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <div id="container" class="class-grid">
+        <!-- Classes will be added here dynamically -->
+      </div>
+      <div class="floating-action-button">
+        <button id="addSquare" class="add-class-fab" aria-label="Add class">
+          <span class="material-icons">add</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Modal for Adding Class -->
+    <div id="squareModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Create class</h2>
+          <span class="close material-icons">close</span>
+        </div>
+        <form id="squareForm">
+          <div class="form-group">
+            <label for="className">Class name (required)</label>
+            <input
+              type="text"
+              id="className"
+              name="className"
+              required
+              placeholder="Enter class name"
+              maxlength="100"
+            />
+          </div>
+          <div class="form-group">
+            <label for="section">Section</label>
+            <input
+              type="text"
+              id="section"
+              name="section"
+              placeholder="Enter section"
+              maxlength="50"
+            />
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              placeholder="Enter subject"
+              maxlength="50"
+            />
+          </div>
+          <div class="form-group">
+            <label for="teacherName">Teacher name (required)</label>
+            <input
+              type="text"
+              id="teacherName"
+              name="teacherName"
+              required
+              placeholder="Enter teacher name"
+              maxlength="50"
+            />
+          </div>
+          <div class="form-actions">
+            <button type="button" class="cancel-btn">Cancel</button>
+            <button type="submit" class="submit-btn">Create</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Context Menu -->
+    <div id="contextMenu" class="context-menu">
+      <div class="menu-item" data-action="edit">
+        <span class="material-icons">edit</span>
+        <span>Edit</span>
+      </div>
+      <div class="menu-item" data-action="copy">
+        <span class="material-icons">content_copy</span>
+        <span>Copy link</span>
+      </div>
+      <div class="menu-item" data-action="archive">
+        <span class="material-icons">archive</span>
+        <span>Archive</span>
+      </div>
+      <div class="menu-item delete" data-action="delete">
+        <span class="material-icons">delete</span>
+        <span>Delete</span>
+      </div>
+    </div>
+
+    <!-- Delete Confirmation Dialog -->
+    <div id="deleteDialog" class="modal">
+      <div class="modal-content confirm-dialog">
+        <div class="modal-header">
+          <h3>Delete class?</h3>
+          <span class="close material-icons">close</span>
+        </div>
+        <div class="modal-body">
+          <p>This class and all its contents will be permanently deleted.</p>
+        </div>
+        <div class="dialog-actions">
+          <button class="cancel-btn">Cancel</button>
+          <button class="delete-btn">Delete</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay">
+      <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Toast Messages -->
+    <div id="toast" class="toast" role="alert">
+      <div class="toast-content">
+        <span class="toast-message"></span>
+        <button class="toast-close material-icons">close</button>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+  </body>
+</html>
