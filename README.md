@@ -141,7 +141,7 @@ We welcome contributions! To contribute to this project, please follow these ste
    - Clone your fork to your local machine:
 
      ```bash
-     git clone https://github.com/your-username/classroom.git
+     git clone https://github.com/Mohamedgwad/classroom.git
      ```
 
 3. **Create a New Branch:**
