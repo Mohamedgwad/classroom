@@ -74,7 +74,7 @@
             referrerpolicy="no-referrer"
           />
         </div>
-        <div class="profile-dropdown" id="profileDropdown">
+        <!-- <div class="profile-dropdown" id="profileDropdown">
           <div class="profile-header">
             <div class="dropdown-image-container">
               <img
@@ -110,7 +110,52 @@
             <span class="material-icons">logout</span>
             <span>Sign out</span>
           </button>
+        </div> -->
+
+        <div class="profile-dropdown" id="profileDropdown">
+          <div class="profile-header">
+            <div class="dropdown-image-container">
+              <img
+                src="/image/unnamed.png"
+                alt="Profile"
+                class="dropdown-profile-img loading"
+                id="dropdownProfileImg"
+                referrerpolicy="no-referrer"
+              />
+            </div>
+            <div class="profile-info">
+              <div id="userName">Not signed in</div>
+              <div id="userEmail"></div>
+            </div>
+          </div>
+        
+          <div class="dropdown-divider"></div>
+        
+          <div class="theme-switch-container">
+            <label class="theme-switch" for="checkbox">
+              <input type="checkbox" id="checkbox" />
+              <div class="slider round">
+                <span class="material-icons light">light_mode</span>
+                <span class="material-icons dark">dark_mode</span>
+              </div>
+            </label>
+            <span>Dark theme</span>
+          </div>
+        
+          <div class="dropdown-divider"></div>
+        
+          <button id="signInBtn" class="dropdown-item">
+            <span class="material-icons">login</span>
+            <span>Sign in</span>
+          </button>
+        
+          <button id="signOutBtn" class="dropdown-item" style="display: none">
+            <span class="material-icons">logout</span>
+            <span>Sign out</span>
+          </button>
         </div>
+        
+        
       </div>
     </div>
 

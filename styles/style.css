@@ -28,7 +28,6 @@
 }
 
 /* Theme Switch Styles */
-/* Theme Switch Styles */
 .theme-switch-wrapper {
   width: 60px;
   display: flex;
@@ -58,7 +57,7 @@
 }
 
 .slider {
-  position: absolute;
+  position: fixed;
   cursor: pointer;
   top: 0;
   left: 0;
@@ -71,6 +70,7 @@
   justify-content: space-between;
   padding: 5px;
   border-radius: 34px;
+  z-index: 1000;
 }
 
 .slider:before {
@@ -309,7 +309,7 @@ body {
   left: 0;
   height: calc(100% - 70px);
   width: 64px;
-  background-color: #ffffff; /* Solid white background */
+  background-color: #ffffff; 
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   transition: width 0.3s ease;
   padding: 10px 0;
@@ -320,16 +320,16 @@ body {
 
 /* Dark theme sidebar */
 body.dark-theme .sidebar {
-  background-color: #2d2e30; /* Dark mode background */
+  background-color: #2d2e30; 
 }
 
 .nav-container:hover .sidebar {
   width: 260px;
-  background-color: #ffffff; /* Ensure solid background when expanded */
+  background-color: #ffffff; 
 }
 
 body.dark-theme .nav-container:hover .sidebar {
-  background-color: #2d2e30; /* Dark mode background when expanded */
+  background-color: #2d2e30; 
 }
 
 /* Add a backdrop to prevent content showing through */
@@ -443,8 +443,7 @@ body.dark-theme .nav-container:hover .sidebar {
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-.card-section,
-.card-teacher {
+.card-section, .card-teacher {
   font-size: 14px;
   margin: 4px 0;
   opacity: 0.9;
@@ -571,14 +570,19 @@ body.dark-theme .nav-container:hover .sidebar {
 }
 
 .modal-content {
-  background-color: #ffffff;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  margin: 10% auto;
-  padding: 24px;
-  width: 480px;
-  border-radius: 8px;
-  position: relative;
-}
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    margin: 0; 
+    padding: 24px;
+    width: 480px;
+    border-radius: 8px;
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    z-index: 1000; 
+  }
+  
 
 .modal-header {
   display: flex;
@@ -607,13 +611,17 @@ body.dark-theme .nav-container:hover .sidebar {
 }
 
 .form-group input {
-  width: calc(100% - 16px);
-  padding: 12px 8px;
-  border: 1px solid #dadce0;
-  border-radius: 4px;
-  font-size: 14px;
-  transition: border-color var(--transition-speed);
+    width: 100%; 
+    max-width: 100%; 
+    padding: 12px 8px;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box; 
+    transition: border-color var(--transition-speed);
+    overflow: hidden; 
 }
+  
 
 .form-group input:focus {
   outline: none;
@@ -821,25 +829,122 @@ body.dark-theme .nav-container:hover .sidebar {
     display: block;
 }
 
-/* Theme Switch in Dropdown */
+/* Profile Header */
+.profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.dropdown-image-container {
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.dropdown-profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile-info {
+    flex-grow: 1;
+}
+
+#userName {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#userEmail {
+    font-size: 12px;
+    color: #888;
+}
+
+/* Divider */
+.dropdown-divider {
+    border-top: 1px solid #eee;
+    margin: 12px 0;
+}
+
+/* Theme Switch */
 .theme-switch-container {
     display: flex;
     align-items: center;
-    padding: 12px 16px;
-    gap: 12px;
+    gap: 8px;
 }
 
-.theme-switch-container .theme-switch {
-    margin: 0;
+.theme-switch {
+    display: flex;
+    align-items: center;
 }
 
-/* Update existing theme switch styles */
-.theme-switch-wrapper {
-    display: none; /* Hide the original theme switch */
+.slider {
+    position: relative;
+    width: 34px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 34px;
+    cursor: pointer;
 }
 
-/* Rest of your existing styles... */
-/* Add to style.css */
+.slider .material-icons {
+    font-size: 16px;
+}
+
+input[type="checkbox"] {
+    opacity: 0;
+    position: absolute;
+}
+
+input[type="checkbox"]:checked + .slider {
+    background-color: #4CAF50;
+}
+
+input[type="checkbox"]:checked + .slider .material-icons.light {
+    display: none;
+}
+
+input[type="checkbox"]:checked + .slider .material-icons.dark {
+    display: block;
+}
+
+/* Button styles */
+.dropdown-item {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    color: #333;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.dropdown-item:hover {
+    background-color: #f7f7f7;
+}
+
+.material-icons {
+    font-size: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .profile-dropdown {
+        width: 200px; /* Smaller width on smaller screens */
+        padding: 12px;
+    }
+}
+
+/* Dark Theme */
 .dark-theme {
     background-color: var(--primary-bg-dark);
     color: var(--primary-text-dark);
@@ -867,6 +972,29 @@ body.dark-theme .nav-container:hover .sidebar {
 .dark-theme #userEmail {
     color: #9aa0a6;
 }
+
+/* Profile Dropdown: Styling for when the user is signed in */
+#signInBtn,
+#signOutBtn {
+    display: block;
+}
+
+#signOutBtn {
+    display: none; /* Hidden by default, shown when signed in */
+}
+
+/* Additional Customizations if needed */
+
+/* Adjust modal content for better layout */
+.modal-content {
+    width: 480px;
+    max-width: 90%; /* Ensure modal is responsive */
+    padding: 24px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
 /* Login Page Styles */
 .login-page {
     background-color: #f5f5f5;
@@ -2819,3 +2947,7 @@ body.dark-theme .nav-container:hover .sidebar {
 .dark-theme .action-button {
     color: #9aa0a6;
 }
+
+
+
+
