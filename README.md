@@ -118,7 +118,7 @@ classroom/
 │   ├── main.html            # Main page of the application
 │   └── script.js            # JavaScript for main functionality
 └── styles/
-    └── style.css            # CSS styling for the application
+│    └── style.css            # CSS styling for the application
 └── index.html               # Main entry point of the application
 ```
 
