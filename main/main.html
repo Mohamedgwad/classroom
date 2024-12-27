@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../styles/style.css" />
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
@@ -20,10 +20,10 @@
     <div class="topbar">
       <div class="nav-container">
         <div class="nav">
-          <img class="navp" src="/image/interface_12383011.png" alt="Menu" />
+          <img class="navp" src="../images/interface_12383011.png" alt="Menu" />
         </div>
         <div class="sidebar">
-          <a href="/main/main.html" class="sidebar-item active">
+          <a href="main.html" class="sidebar-item active">
             <i class="material-icons">home</i>
             <span>Home</span>
           </a>
@@ -49,38 +49,68 @@
       <div class="logo">
         <img
           class="logop"
-          src="/image/86dd2927-11ea-4f1b-a8b2-cdf238b9dd26.png"
+          src="../images/86dd2927-11ea-4f1b-a8b2-cdf238b9dd26.png"
           alt="Logo"
         />
-        <p class="logot"><a href="/main/main.html" class="place-link">Classroom</a></p>
+        <p class="logot">
+          <a href="main.html" class="place-link">Classroom</a>
+        </p>
       </div>
 
-      <div class="place">
-        <img
-          class="place-arrow"
-          src="/image/arrow-point-to-right.png"
-          alt="Arrow"
-        />
-        <span class="placet">Place</span>
-      </div>
 
-      <!-- Theme Switch -->
-      <div class="theme-switch-wrapper">
-        <label class="theme-switch" for="checkbox">
-          <input type="checkbox" id="checkbox" />
-          <div class="slider round">
-            <span class="material-icons light">light_mode</span>
-            <span class="material-icons dark">dark_mode</span>
-          </div>
-        </label>
-      </div>
 
       <div class="apps">
-        <img class="apps" src="/image/al-icon.png" alt="Apps" />
+        <img class="apps" src="../images/al-icon.png" alt="Apps" />
       </div>
 
-      <div class="namelogo">
-        <img class="namelogo" src="/image/unnamed.png" alt="Profile" />
+      <!-- Profile Section -->
+      <div class="namelogo" id="profileSection">
+        <div class="profile-image-container">
+          <img
+            class="namelogo-img loading"
+            src="/image/unnamed.png"
+            alt="Profile"
+            id="profileImage"
+            referrerpolicy="no-referrer"
+          />
+        </div>
+        <div class="profile-dropdown" id="profileDropdown">
+          <div class="profile-header">
+            <div class="dropdown-image-container">
+              <img
+                src="/image/unnamed.png"
+                alt="Profile"
+                class="dropdown-profile-img loading"
+                id="dropdownProfileImg"
+                referrerpolicy="no-referrer"
+              />
+            </div>
+            <div class="profile-info">
+              <div id="userName">Not signed in</div>
+              <div id="userEmail"></div>
+            </div>
+          </div>
+          <div class="dropdown-divider"></div>
+          <div class="theme-switch-container">
+            <label class="theme-switch" for="checkbox">
+              <input type="checkbox" id="checkbox" />
+              <div class="slider round">
+                <span class="material-icons light">light_mode</span>
+                <span class="material-icons dark">dark_mode</span>
+              </div>
+            </label>
+            <span>Dark theme</span>
+          </div>
+          <div class="dropdown-divider"></div>
+          <button id="signInBtn" class="dropdown-item">
+            <span class="material-icons">login</span>
+            <span>Sign in</span>
+          </button>
+          <button id="signOutBtn" class="dropdown-item" style="display: none">
+            <span class="material-icons">logout</span>
+            <span>Sign out</span>
+          </button>
+        </div>
       </div>
     </div>
 
@@ -89,14 +119,29 @@
       <div id="container" class="class-grid">
         <!-- Classes will be added here dynamically -->
       </div>
+      <!-- Updated Floating Action Button -->
       <div class="floating-action-button">
-        <button id="addSquare" class="add-class-fab" aria-label="Add class">
+        <button
+          id="mainActionBtn"
+          class="add-class-fab"
+          aria-label="Class actions"
+        >
           <span class="material-icons">add</span>
         </button>
+        <div class="fab-menu" id="fabMenu">
+          <button class="fab-menu-item" id="createClassBtn">
+            <span class="material-icons">create_new_folder</span>
+            <span>Create class</span>
+          </button>
+          <button class="fab-menu-item" id="joinClassBtn">
+            <span class="material-icons">person_add</span>
+            <span>Join class</span>
+          </button>
+        </div>
       </div>
     </div>
 
-    <!-- Modal for Adding Class -->
+    <!-- Modal for Creating Class -->
     <div id="squareModal" class="modal">
       <div class="modal-content">
         <div class="modal-header">
@@ -154,6 +199,35 @@
       </div>
     </div>
 
+    <!-- Modal for Joining Class -->
+    <div id="joinClassModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Join class</h2>
+          <span class="close material-icons">close</span>
+        </div>
+        <form id="joinClassForm">
+          <div class="form-group">
+            <label for="classCode">Class code</label>
+            <input
+              type="text"
+              id="classCode"
+              name="classCode"
+              required
+              placeholder="Enter class code"
+              maxlength="7"
+            />
+            <div class="form-hint">Ask your teacher for the class code</div>
+            <div class="form-error" id="joinClassError"></div>
+          </div>
+          <div class="form-actions">
+            <button type="button" class="cancel-btn">Cancel</button>
+            <button type="submit" class="submit-btn">Join class</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
     <!-- Context Menu -->
     <div id="contextMenu" class="context-menu">
       <div class="menu-item" data-action="edit">
@@ -175,21 +249,24 @@
     </div>
 
     <!-- Delete Confirmation Dialog -->
-    <div id="deleteDialog" class="modal">
-      <div class="modal-content confirm-dialog">
+<!-- Delete Confirmation Dialog -->
+<div id="deleteDialog" class="modal">
+    <div class="modal-content confirm-dialog">
         <div class="modal-header">
-          <h3>Delete class?</h3>
-          <span class="close material-icons">close</span>
+            <h3>Delete class?</h3>
+            <span class="close material-icons">close</span>
         </div>
         <div class="modal-body">
-          <p>This class and all its contents will be permanently deleted.</p>
+            <p>This class and all its contents will be permanently deleted.</p>
+            <p>This action cannot be undone.</p>
         </div>
         <div class="dialog-actions">
-          <button class="cancel-btn">Cancel</button>
-          <button class="delete-btn">Delete</button>
+            <button class="cancel-btn">Cancel</button>
+            <button class="delete-btn">Delete</button>
         </div>
-      </div>
     </div>
+</div>
+
 
     <!-- Loading Overlay -->
     <div id="loadingOverlay" class="loading-overlay">
@@ -204,7 +281,32 @@
       </div>
     </div>
 
-    <!-- Scripts -->
-    <script src="script.js"></script>
+    <!-- Firebase Scripts -->
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+      import { getAuth } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+      import { getFirestore } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyB9PG9lUZfTMZp5ILp6PJ9fsWS5IjmLzJ4",
+        authDomain: "calss-85357.firebaseapp.com",
+        projectId: "calss-85357",
+        storageBucket: "calss-85357.firebasestorage.app",
+        messagingSenderId: "155474296679",
+        appId: "1:155474296679:web:bb96af4d171395affff9c2",
+        measurementId: "G-F1HQQXRF9G",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const auth = getAuth(app);
+      const db = getFirestore(app);
+
+      window.auth = auth;
+      window.db = db;
+    </script>
+
+    <!-- Main Script -->
+    <script type="module" src="script.js"></script>
   </body>
 </html>

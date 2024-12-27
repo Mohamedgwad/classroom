@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account - Google Classroom</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="register-page">
+    <div class="register-container">
+        <div class="register-card">
+            <!-- Logo and Header -->
+            <div class="register-header">
+                <img src="../images/86dd2927-11ea-4f1b-a8b2-cdf238b9dd26.png" alt="Logo" class="register-logo">
+                <h1>Create your Account</h1>
+                <p>to continue to Classroom</p>
+            </div>
+            
+            <!-- Registration Form -->
+            <form id="registerForm" class="register-form">
+                <!-- Name Fields -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First name</label>
+                        <input 
+                            type="text" 
+                            id="firstName" 
+                            name="firstName" 
+                            required 
+                            placeholder="Enter first name"
+                            autocomplete="given-name"
+                        >
+                        <div class="form-error" data-error="firstName"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last name</label>
+                        <input 
+                            type="text" 
+                            id="lastName" 
+                            name="lastName" 
+                            required 
+                            placeholder="Enter last name"
+                            autocomplete="family-name"
+                        >
+                        <div class="form-error" data-error="lastName"></div>
+                    </div>
+                </div>
+
+                <!-- Email Field -->
+                <div class="form-group">
+                    <label for="registerEmail">Email</label>
+                    <input 
+                        type="email" 
+                        id="registerEmail" 
+                        name="email" 
+                        required 
+                        placeholder="Enter your email"
+                        autocomplete="email"
+                    >
+                    <div class="form-error" data-error="email"></div>
+                </div>
+
+                <!-- Password Field -->
+                <div class="form-group password-group">
+                    <label for="registerPassword">Password</label>
+                    <div class="password-input-container">
+                        <input 
+                            type="password" 
+                            id="registerPassword" 
+                            name="password" 
+                            required 
+                            placeholder="Create password"
+                            autocomplete="new-password"
+                        >
+                        <button type="button" id="togglePassword" class="toggle-password" aria-label="Toggle password visibility">
+                            <span class="material-icons">visibility_off</span>
+                        </button>
+                    </div>
+                    <div class="form-error" data-error="password"></div>
+                </div>
+
+                <!-- Confirm Password Field -->
+                <div class="form-group password-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <div class="password-input-container">
+                        <input 
+                            type="password" 
+                            id="confirmPassword" 
+                            name="confirmPassword" 
+                            required 
+                            placeholder="Confirm password"
+                            autocomplete="new-password"
+                        >
+                        <button type="button" id="toggleConfirmPassword" class="toggle-password" aria-label="Toggle password visibility">
+                            <span class="material-icons">visibility_off</span>
+                        </button>
+                    </div>
+                    <div class="form-error" data-error="confirmPassword"></div>
+                </div>
+
+                <!-- Password Requirements -->
+                <div class="password-requirements">
+                    <p>Password requirements:</p>
+                    <ul>
+                        <li id="lengthReq">At least 8 characters</li>
+                        <li id="upperReq">One uppercase letter</li>
+                        <li id="lowerReq">One lowercase letter</li>
+                        <li id="numberReq">One number</li>
+                        <li id="specialReq">One special character (!@#$%^&*)</li>
+                    </ul>
+                </div>
+
+                <!-- Error Message Display -->
+                <div class="form-error" id="registerError"></div>
+
+                <!-- Submit Button -->
+                <div class="register-actions">
+                    <a href="login.html" class="text-button">Sign in instead</a>
+                    <button type="submit" class="primary-button">Create Account</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Toast Messages -->
+    <div id="toast" class="toast" role="alert">
+        <div class="toast-content">
+            <span class="toast-message"></span>
+            <button class="toast-close material-icons">close</button>
+        </div>
+    </div>
+
+    <!-- Firebase Scripts -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import { getAuth } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyB9PG9lUZfTMZp5ILp6PJ9fsWS5IjmLzJ4",
+            authDomain: "calss-85357.firebaseapp.com",
+            projectId: "calss-85357",
+            storageBucket: "calss-85357.firebasestorage.app",
+            messagingSenderId: "155474296679",
+            appId: "1:155474296679:web:bb96af4d171395affff9c2",
+            measurementId: "G-F1HQQXRF9G"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        window.auth = auth;
+    </script>
+
+    <!-- Registration Script -->
+    <script type="module" src="register.js"></script>
+</body>
+</html>
