@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class View - Google Classroom</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/class.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Topbar -->
+    <div class="topbar">
+        <div class="nav-container">
+            <div class="nav">
+                <img class="navp" src="../images/interface_12383011.png" alt="Menu">
+            </div>
+            <div class="sidebar">
+                <a href="main.html" class="sidebar-item">
+                    <i class="material-icons">home</i>
+                    <span>Home</span>
+                </a>
+                <a href="#" class="sidebar-item">
+                    <i class="material-icons">calendar_today</i>
+                    <span>Calendar</span>
+                </a>
+                <div class="sidebar-divider"></div>
+                <div class="enrolled-classes">
+                    <!-- Enrolled classes will be added here -->
+                </div>
+            </div>
+        </div>
+
+        <div class="logo">
+            <img class="logop" src="../images/86dd2927-11ea-4f1b-a8b2-cdf238b9dd26.png" alt="Logo">
+            <p class="logot"><a href="main.html" class="place-link">Classroom</a></p>
+        </div>
+
+        <!-- Profile Section -->
+        <div class="namelogo" id="profileSection">
+            <img class="namelogo-img" src="../images/unnamed.png" alt="Profile" id="profileImage">
+            <div class="profile-dropdown" id="profileDropdown">
+                <div class="profile-header">
+                    <img src="../images/unnamed.png" alt="Profile" class="dropdown-profile-img">
+                    <div class="profile-info">
+                        <div id="userName">Not signed in</div>
+                        <div id="userEmail"></div>
+                    </div>
+                </div>
+                <div class="dropdown-divider"></div>
+                <div class="theme-switch-container">
+                    <label class="theme-switch" for="checkbox">
+                        <input type="checkbox" id="checkbox">
+                        <div class="slider round">
+                            <span class="material-icons light">light_mode</span>
+                            <span class="material-icons dark">dark_mode</span>
+                        </div>
+                    </label>
+                    <span>Dark theme</span>
+                </div>
+                <div class="dropdown-divider"></div>
+                <button id="signOutBtn" class="dropdown-item">
+                    <span class="material-icons">logout</span>
+                    Sign out
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Class Layout -->
+    <div class="class-layout">
+        <!-- Class Header -->
+        <header class="class-header" id="classHeader">
+            <div class="class-info">
+                <h1 id="className">Loading...</h1>
+                <div class="class-details">
+                    <span id="classSection">Section: Loading...</span>
+                    <span class="separator">•</span>
+                    <span id="classTeacher">Teacher: Loading...</span>
+                </div>
+            </div>
+            <div class="class-actions">
+                <button id="inviteBtn" class="invite-button">
+                    <span class="material-icons">person_add</span>
+                    Invite
+                </button>
+                <button id="settingsBtn" class="settings-button teacher-only">
+                    <span class="material-icons">settings</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Class Navigation -->
+        <nav class="class-tabs">
+            <button class="tab-btn active" data-tab="stream">
+                <span class="material-icons">forum</span>
+                Stream
+            </button>
+            <button class="tab-btn" data-tab="classwork">
+                <span class="material-icons">assignment</span>
+                Classwork
+            </button>
+            <button class="tab-btn" data-tab="people">
+                <span class="material-icons">people</span>
+                People
+            </button>
+            <button class="tab-btn" data-tab="grades">
+                <span class="material-icons">grade</span>
+                Grades
+            </button>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="class-content">
+            <!-- Stream Tab -->
+            <div id="streamTab" class="content-tab active">
+                <div class="announcement-form">
+                    <img src="../images/unnamed.png" alt="User" class="user-avatar">
+                    <div class="form-content">
+                        <input type="text" id="announcementInput" 
+                               placeholder="Announce something to your class">
+                        <div class="form-actions hidden">
+                            <button class="cancel-btn">Cancel</button>
+                            <button id="postAnnouncement" class="submit-btn">Post</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="announcementsList" class="announcements-list">
+                    <!-- Announcements will be added here -->
+                </div>
+            </div>
+
+            <!-- Classwork Tab -->
+            <div id="classworkTab" class="content-tab">
+                <div class="classwork-header">
+                    <button id="createAssignment" class="primary-button teacher-only">
+                        <span class="material-icons">add</span>
+                        Create
+                    </button>
+                </div>
+                <div id="assignmentsList" class="assignments-list">
+                    <!-- Assignments will be added here -->
+                </div>
+            </div>
+
+            <!-- People Tab -->
+            <div id="peopleTab" class="content-tab">
+                <div class="people-section">
+                    <h2>Teachers</h2>
+                    <div id="teachersList" class="people-list">
+                        <!-- Teachers will be added here -->
+                    </div>
+                </div>
+                <div class="people-section">
+                    <h2>Students</h2>
+                    <div id="studentsList" class="people-list">
+                        <!-- Students will be added here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grades Tab -->
+            <div id="gradesTab" class="content-tab">
+                <div id="gradesList" class="grades-list">
+                    <!-- Grades will be added here -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Invite Modal -->
+    <div id="inviteModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Invite people</h2>
+                <span class="close material-icons">close</span>
+            </div>
+            <div class="modal-body">
+                <div class="class-code-display">
+                    <h3>Class code</h3>
+                    <div class="code-box">
+                        <span id="displayClassCode"></span>
+                        <button id="copyCodeBtn" class="icon-button">
+                            <span class="material-icons">content_copy</span>
+                        </button>
+                    </div>
+                    <p class="code-hint">Share this code with your students</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Toast Messages -->
+    <div id="toast" class="toast" role="alert">
+        <div class="toast-content">
+            <span class="toast-message"></span>
+            <button class="toast-close material-icons">close</button>
+        </div>
+    </div>
+
+    <!-- Firebase -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import { getAuth } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+        import { getFirestore } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+        const firebaseConfig = {
+            // Your Firebase config here
+            apiKey: "YOUR_API_KEY",
+            authDomain: "YOUR_AUTH_DOMAIN",
+            projectId: "YOUR_PROJECT_ID",
+            storageBucket: "YOUR_STORAGE_BUCKET",
+            messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+            appId: "YOUR_APP_ID"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const db = getFirestore(app);
+
+        window.auth = auth;
+        window.db = db;
+    </script>
+
+    <!-- Main Script -->
+    <script type="module" src="class.js"></script>
+</body>
+</html>
