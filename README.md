@@ -4,11 +4,14 @@ The Classroom Project is a web-based application designed to facilitate interact
 
 ## Features
 
-- Dark Mode
-- Login with Email
-- Login with Google
-- Create Class
-- Join Class
+- **Dark Mode**: Toggle between light and dark themes for better usability.
+- **Login with Email**: Authenticate using an email and password.
+- **Login with Google**: Authenticate using a Google account.
+- **Create Class**: Teachers can create classes and set class details.
+- **Join Class**: Students can join classes using a unique class code.
+- **Leave Class**: Allows users to leave a class they no longer wish to participate in.
+- **Add Announcements**: Teachers can post announcements for their class.
+- **Promote to Teacher**: Class creators can promote students to teachers.
 
 ## Languages Used
 
