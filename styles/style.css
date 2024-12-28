@@ -643,12 +643,18 @@ body.dark-theme .nav-container:hover .sidebar {
   font-size: 14px;
   font-weight: 500;
   transition: all var(--transition-speed);
+
+  display: flex; /* or use 'inline-flex' */
+  align-items: center; /* Vertically centers the text */
+  justify-content: center; /* Horizontally centers the text */
+  text-align: center; /* Centers multiline text (if any) */
 }
 
 .submit-btn {
   background-color: var(--primary-blue);
   color: white;
   border: none;
+  text-align: center; /* Centers multiline text (if any) */
 }
 
 .submit-btn:hover {
@@ -1089,6 +1095,14 @@ input[type="checkbox"]:checked + .slider .material-icons.dark {
     align-items: center;
 }
 
+.btn-container {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    width: 100%;
+
+}
+
 .text-button {
     color: #1a73e8;
     background: none;
@@ -1097,11 +1111,14 @@ input[type="checkbox"]:checked + .slider .material-icons.dark {
     cursor: pointer;
     font-weight: 500;
     text-decoration: none;
+    text-align: center;
 }
+
 
 .text-button:hover {
     background-color: rgba(26,115,232,0.04);
     border-radius: 4px;
+    text-decoration: underline;
 }
 
 .primary-button {
@@ -1114,6 +1131,7 @@ input[type="checkbox"]:checked + .slider .material-icons.dark {
     font-weight: 500;
     cursor: pointer;
     transition: background-color 0.2s;
+    text-align: center;
 }
 
 .primary-button:hover {
@@ -1228,7 +1246,7 @@ input[type="checkbox"]:checked + .slider .material-icons.dark {
 
 .register-actions {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin-top: 24px;
 }
@@ -1662,6 +1680,11 @@ input[type="checkbox"]:checked + .slider .material-icons.dark {
     font-weight: 500;
     cursor: pointer;
     transition: background-color 0.2s;
+
+    display: flex;          
+    justify-content: center; 
+    align-items: center;     
+    text-align: center;
 }
 
 .primary-button:hover {
