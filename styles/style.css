@@ -867,6 +867,8 @@ body.dark-theme .nav-container:hover .sidebar {
 .dark-theme #userEmail {
   color: #9aa0a6;
 }
+
+
 /* Login Page Styles */
 .login-page {
   background-color: #f5f5f5;
@@ -885,7 +887,7 @@ body.dark-theme .nav-container:hover .sidebar {
 .login-card {
   background: white;
   border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   padding: 48px;
 }
 
@@ -940,10 +942,18 @@ body.dark-theme .nav-container:hover .sidebar {
 }
 
 .remember-me {
-  display: flex;
-  align-items: center;
+  display: inline-flex;
+  align-items: center; 
   gap: 8px;
+  margin: 0; 
   cursor: pointer;
+  white-space: nowrap; 
+}
+
+.reme {
+  margin: 0; 
+  font-size: 16px; 
+  white-space: nowrap; 
 }
 
 .forgot-password {
@@ -961,6 +971,14 @@ body.dark-theme .nav-container:hover .sidebar {
   align-items: center;
 }
 
+.btn-container {
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  width: 100%;
+
+}
+
 .text-button {
   color: #1a73e8;
   background: none;
@@ -969,11 +987,14 @@ body.dark-theme .nav-container:hover .sidebar {
   cursor: pointer;
   font-weight: 500;
   text-decoration: none;
+  text-align: center;
 }
 
+
 .text-button:hover {
-  background-color: rgba(26, 115, 232, 0.04);
+  background-color: rgba(26,115,232,0.04);
   border-radius: 4px;
+  text-decoration: underline;
 }
 
 .primary-button {
@@ -986,6 +1007,7 @@ body.dark-theme .nav-container:hover .sidebar {
   font-weight: 500;
   cursor: pointer;
   transition: background-color 0.2s;
+  text-align: center;
 }
 
 .primary-button:hover {
@@ -1016,7 +1038,7 @@ body.dark-theme .nav-container:hover .sidebar {
 .register-card {
   background: white;
   border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   padding: 48px;
 }
 
@@ -1087,20 +1109,20 @@ body.dark-theme .nav-container:hover .sidebar {
 }
 
 .password-requirements li::before {
-  content: "×";
+  content: '×';
   position: absolute;
   left: 0;
   color: #d93025;
 }
 
 .password-requirements li.met::before {
-  content: "✓";
+  content: '✓';
   color: #1bb76e;
 }
 
 .register-actions {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   margin-top: 24px;
 }
@@ -1427,7 +1449,7 @@ body.dark-theme .nav-container:hover .sidebar {
 .login-card {
   background: white;
   border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   padding: 48px;
 }
 
@@ -1534,6 +1556,11 @@ body.dark-theme .nav-container:hover .sidebar {
   font-weight: 500;
   cursor: pointer;
   transition: background-color 0.2s;
+
+  display: flex;          
+  justify-content: center; 
+  align-items: center;     
+      text-align: center;
 }
 
 .primary-button:hover {
@@ -1548,7 +1575,7 @@ body.dark-theme .nav-container:hover .sidebar {
 
 .divider::before,
 .divider::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 50%;
   width: 45%;
@@ -1614,6 +1641,48 @@ body.dark-theme .nav-container:hover .sidebar {
   font-size: 12px;
   margin-top: 4px;
   min-height: 16px;
+}
+
+/* Dark Theme Support */
+.dark-theme .login-page {
+  background-color: #202124;
+}
+
+.dark-theme .login-card {
+  background: #2d2e30;
+}
+
+.dark-theme .login-header h1 {
+  color: #e8eaed;
+}
+
+.dark-theme .login-header p {
+  color: #9aa0a6;
+}
+
+.dark-theme .form-group input {
+  background: #202124;
+  border-color: #5f6368;
+  color: #e8eaed;
+}
+
+.dark-theme .form-group label {
+  color: #9aa0a6;
+}
+
+.dark-theme .divider span {
+  background: #2d2e30;
+  color: #9aa0a6;
+}
+
+.dark-theme .google-btn {
+  background: #202124;
+  border-color: #5f6368;
+  color: #e8eaed;
+}
+
+.dark-theme .google-btn:hover {
+  background: #303134;
 }
 
 /* Dark Theme Support */

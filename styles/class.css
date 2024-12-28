@@ -121,12 +121,17 @@
   padding: 16px;
   margin-bottom: 24px;
   box-shadow: var(--shadow-1);
+  max-width: 800px; 
+  box-sizing: border-box;
+
 }
 
 .form-content {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 #announcementInput {
@@ -137,12 +142,14 @@
   font-size: 14px;
   background: var(--surface-color);
   color: var(--text-primary);
+  box-sizing: border-box; 
 }
 
 .form-actions {
   display: flex;
   justify-content: flex-end;
   gap: 12px;
+  margin-top: -8px;
 }
 
 .form-actions.hidden {
@@ -325,6 +332,13 @@
 .primary-button {
   background: var(--primary-color);
   color: white;
+}
+.cancel-btn,
+.submit-btn {
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
 }
 
 .cancel-btn {
@@ -620,4 +634,1032 @@ input:checked + .slider:before {
 .member-email {
   font-size: 14px;
   color: var(--text-secondary);
+}
+/* Classwork Styles */
+.classwork-header {
+    margin-bottom: 20px;
+    padding: 16px;
+    background: var(--surface-color);
+    border-radius: 8px;
+    box-shadow: var(--shadow-1);
+}
+
+.create-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.create-button:hover {
+    background-color: #1557b0;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: var(--surface-color);
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: var(--shadow-2);
+}
+
+.modal-header {
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: var(--text-primary);
+}
+
+.form-group {
+    margin: 16px 24px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 14px;
+    background: var(--surface-color);
+    color: var(--text-primary);
+}
+
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.form-actions {
+    padding: 16px 24px;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.cancel-btn {
+    padding: 8px 16px;
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+}
+
+.submit-btn {
+    padding: 8px 16px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Dark Theme Support */
+body.dark-theme .modal-content {
+    background-color: var(--surface-color);
+}
+
+body.dark-theme .form-group input,
+body.dark-theme .form-group textarea {
+    background-color: var(--background-color);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+/* Add to your class.css */
+.create-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.create-button:hover {
+    background-color: #1557b0;
+}
+
+.classwork-header {
+    margin-bottom: 20px;
+}
+
+
+/* Promote/Demote Button Styles */
+.promote-btn,
+.demote-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background-color: var(--background-color);
+    color: var(--text-secondary);
+}
+
+.promote-btn:hover,
+.demote-btn:hover {
+    background-color: var(--hover-color);
+    color: var(--primary-color);
+}
+
+.promote-btn .material-icons,
+.demote-btn .material-icons {
+    font-size: 18px;
+}
+
+/* Style specific to promote button */
+.promote-btn {
+    border: 1px solid var(--border-color);
+}
+
+.promote-btn:hover {
+    border-color: var(--primary-color);
+}
+
+/* Style specific to demote button */
+.demote-btn {
+    border: 1px solid var(--border-color);
+    color: var(--error-color);
+}
+
+.demote-btn:hover {
+    background-color: rgba(217, 48, 37, 0.1);
+    border-color: var(--error-color);
+    color: var(--error-color);
+}
+
+/* Member item layout adjustments */
+.member-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+    justify-content: space-between;
+}
+
+.member-info-container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.member-actions {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .promote-btn span:not(.material-icons),
+    .demote-btn span:not(.material-icons) {
+        display: none; /* Hide text on mobile, show only icons */
+    }
+
+    .promote-btn,
+    .demote-btn {
+        padding: 8px;
+    }
+
+    .member-item {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .member-actions {
+        width: 100%;
+        justify-content: flex-end;
+    }
+}
+
+/* Animation for button hover */
+.promote-btn,
+.demote-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.promote-btn::after,
+.demote-btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+.promote-btn:active::after,
+.demote-btn:active::after {
+    width: 200px;
+    height: 200px;
+    opacity: 0;
+}
+
+/* Disabled state */
+.promote-btn:disabled,
+.demote-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Focus state for accessibility */
+.promote-btn:focus,
+.demote-btn:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Dark theme adjustments */
+.dark-theme .promote-btn,
+.dark-theme .demote-btn {
+    background-color: var(--surface-color);
+    border-color: var(--border-color);
+}
+
+.dark-theme .promote-btn:hover {
+    background-color: rgba(26, 115, 232, 0.1);
+}
+
+.dark-theme .demote-btn:hover {
+    background-color: rgba(217, 48, 37, 0.1);
+}
+
+
+/* Assignment Styles */
+.assignment-card {
+    background: var(--surface-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 16px;
+    box-shadow: var(--shadow-1);
+    transition: box-shadow 0.3s ease;
+}
+
+.assignment-card:hover {
+    box-shadow: var(--shadow-2);
+}
+
+.assignment-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.assignment-icon {
+    color: var(--primary-color);
+    font-size: 24px;
+    padding: 8px;
+    background: var(--primary-light);
+    border-radius: 50%;
+}
+
+.assignment-title-section {
+    flex: 1;
+}
+
+.assignment-title-section h3 {
+    margin: 0 0 8px 0;
+    color: var(--text-primary);
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.assignment-details {
+    color: var(--text-secondary);
+    font-size: 14px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.assignment-description {
+    color: var(--text-primary);
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.assignment-actions {
+    display: flex;
+    gap: 8px;
+    margin-left: auto;
+}
+
+.assignment-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border-color);
+}
+
+/* Grade Input Styles */
+.grade-input-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.grade-input {
+    width: 80px;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 14px;
+    color: var(--text-primary);
+    background: var(--surface-color);
+}
+
+.save-grade-btn {
+    padding: 8px 16px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.save-grade-btn:hover {
+    background-color: #1557b0;
+}
+
+/* Student View */
+.student-submission {
+    margin-top: 16px;
+    padding: 16px;
+    background: var(--background-color);
+    border-radius: 4px;
+}
+
+/* Assignment Status */
+.assignment-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.status-assigned {
+    background-color: var(--primary-light);
+    color: var(--primary-color);
+}
+
+.status-submitted {
+    background-color: #e6f4ea;
+    color: var(--success-color);
+}
+
+.status-graded {
+    background-color: #fce8e6;
+    color: var(--error-color);
+}
+
+/* Assignment List Header */
+.assignments-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.create-assignment-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.create-assignment-btn:hover {
+    background-color: #1557b0;
+}
+
+/* Assignment Modal */
+.assignment-modal {
+    max-width: 600px;
+    width: 90%;
+}
+
+.assignment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 14px;
+    color: var(--text-primary);
+    background: var(--surface-color);
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .assignment-header {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .assignment-actions {
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .grade-input-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+.no-assignments {
+    text-align: center;
+    padding: 40px;
+    color: var(--text-secondary);
+    background: var(--surface-color);
+    border-radius: 8px;
+    margin: 20px 0;
+}
+/* Submission Styles */
+.submission-section {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border-color);
+}
+
+.submission-input {
+    width: 100%;
+    min-height: 100px;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    resize: vertical;
+    font-family: inherit;
+    font-size: 14px;
+    background: var(--surface-color);
+    color: var(--text-primary);
+}
+
+.submission-status {
+    margin-bottom: 16px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.status-submitted {
+    background-color: var(--primary-light);
+    color: var(--primary-color);
+}
+
+.status-graded {
+    background-color: var(--success-color);
+    color: white;
+}
+
+/* Submissions List Styles */
+.submissions-section {
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border-color);
+}
+
+.submissions-section h4 {
+    margin: 0 0 16px 0;
+    color: var(--text-primary);
+}
+
+.submission-item {
+    background: var(--background-color);
+    border-radius: 4px;
+    padding: 16px;
+    margin-bottom: 12px;
+}
+
+.submission-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.submitter-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.submitter-name {
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.submission-date {
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+.submission-content {
+    color: var(--text-primary);
+    font-size: 14px;
+    line-height: 1.6;
+    white-space: pre-wrap;
+}
+
+.grade-section {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.grade-input {
+    width: 60px;
+    padding: 4px 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.grade-btn {
+    padding: 4px 12px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.grade-btn:hover {
+    background-color: #1557b0;
+}
+/* Assignment Submission Styles */
+.submission-section {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+.submission-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.submission-input {
+    width: 100%;
+    min-height: 120px;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 14px;
+    resize: vertical;
+    background: var(--surface-color);
+    color: var(--text-primary);
+}
+
+.submission-input:disabled {
+    background: var(--background-color);
+    cursor: not-allowed;
+}
+
+.file-upload-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.file-upload-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--text-primary);
+}
+
+.file-upload-label:hover {
+    background: var(--hover-color);
+}
+
+.file-input {
+    display: none;
+}
+
+.file-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.file-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+    background: var(--background-color);
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.file-name {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.file-size {
+    color: var(--text-secondary);
+    font-size: 12px;
+}
+
+.submission-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.submit-btn {
+    padding: 8px 24px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.submit-btn:hover {
+    background: #1557b0;
+}
+
+.submit-btn:disabled {
+    background: var(--border-color);
+    cursor: not-allowed;
+}
+
+.status-card {
+    padding: 16px;
+    background: var(--background-color);
+    border-radius: 4px;
+    margin-top: 16px;
+}
+
+.status-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.status-text {
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.status-details {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+/* Status colors */
+.submitted .status-header {
+    color: var(--primary-color);
+}
+
+.graded .status-header {
+    color: var(--success-color);
+}
+/* Assignment Submission Styles */
+.submission-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 16px;
+}
+
+.submit-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.submit-btn:hover {
+    background-color: #1557b0;
+}
+
+.submit-btn:disabled {
+    background-color: var(--border-color);
+    cursor: not-allowed;
+}
+
+.submission-input {
+    width: 100%;
+    min-height: 120px;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 1.5;
+    resize: vertical;
+    margin-bottom: 16px;
+}
+
+.submission-status {
+    margin-top: 16px;
+    padding: 12px;
+    border-radius: 4px;
+    background-color: var(--background-color);
+}
+.status-card {
+    padding: 16px;
+    border-radius: 8px;
+    margin-top: 16px;
+    background-color: var(--background-color);
+}
+
+.status-card.submitted {
+    background-color: var(--primary-light);
+}
+
+.status-card .status-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.status-card .status-details {
+    margin-top: 8px;
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.submission-input:disabled {
+    background-color: var(--background-color);
+    cursor: not-allowed;
+}
+
+.submit-btn:disabled {
+    background-color: var(--border-color);
+    cursor: not-allowed;
+}
+/* Submission Styles */
+.submission-item {
+    background: var(--surface-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 16px;
+    box-shadow: var(--shadow-1);
+}
+
+.submission-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
+
+.submitter-info {
+    flex: 1;
+}
+
+.submitter-name {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.submission-details {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+.submission-date,
+.grade-badge {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.submission-date .material-icons,
+.grade-badge .material-icons {
+    font-size: 16px;
+}
+
+.grade-badge {
+    color: var(--success-color);
+    font-weight: 500;
+}
+
+.grade-section {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.grade-input {
+    width: 80px;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 14px;
+    color: var(--text-primary);
+}
+
+.grade-btn {
+    padding: 8px 16px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.grade-btn:hover {
+    background-color: #1557b0;
+}
+
+.submission-content {
+    color: var(--text-primary);
+    font-size: 14px;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    margin-bottom: 16px;
+    padding: 16px;
+    background: var(--background-color);
+    border-radius: 4px;
+}
+
+.grade-info {
+    border-top: 1px solid var(--border-color);
+    padding-top: 16px;
+    margin-top: 16px;
+}
+
+.grade-details {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+}
+
+.grade-label {
+    color: var(--text-secondary);
+}
+
+.grade-value {
+    color: var(--success-color);
+    font-weight: 500;
+}
+
+.grade-date {
+    color: var(--text-secondary);
+    font-size: 12px;
+}
+
+.feedback {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border-color);
+}
+
+.feedback-label {
+    display: block;
+    color: var(--text-secondary);
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.feedback-content {
+    color: var(--text-primary);
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .submission-header {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .grade-section {
+        width: 100%;
+    }
+
+    .submission-details {
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-start;
+    }
 }

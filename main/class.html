@@ -146,7 +146,7 @@
           <!-- Stream Tab -->
           <div id="streamTab" class="content-tab active">
             <div class="announcement-form teacher-only">
-              <div class="form-content" style="width: 845px; padding-top: 10px">
+              <div class="form-content" style="width: 750px; padding-top: 10px">
                 <input
                   type="text"
                   id="announcementInput"
@@ -165,9 +165,51 @@
           </div>
 
           <!-- Classwork Tab -->
-          <div id="classworkTab" class="content-tab">
-            <!-- Classwork content will be loaded here -->
+<!-- Classwork Tab -->
+<div id="classworkTab" class="content-tab">
+  <div class="assignments-header">
+      <h2>Assignments</h2>
+      <button id="createAssignmentBtn" class="create-assignment-btn teacher-only">
+          <span class="material-icons">add</span>
+          Create Assignment
+      </button>
+  </div>
+  <div id="assignmentsList"></div>
+</div>
+
+
+<!-- Assignment Modal -->
+<div id="assignmentModal" class="modal">
+  <div class="modal-content" style="top: 400px;">
+      <div class="modal-header">
+          <h2>Create Assignment</h2>
+          <span class="close material-icons">close</span>
+      </div>
+      <form id="assignmentForm">
+          <div class="form-group">
+              <label for="assignmentTitle">Title</label>
+              <input type="text" id="assignmentTitle" required>
           </div>
+          <div class="form-group">
+              <label for="assignmentDescription">Description</label>
+              <textarea id="assignmentDescription" required></textarea>
+          </div>
+          <div class="form-group">
+              <label for="assignmentDueDate">Due Date</label>
+              <input type="datetime-local" id="assignmentDueDate" required>
+          </div>
+          <div class="form-group">
+              <label for="assignmentPoints">Points</label>
+              <input type="number" id="assignmentPoints" min="0" value="100" required>
+          </div>
+          <div class="form-actions">
+              <button type="button" class="cancel-btn">Cancel</button>
+              <button type="submit" class="submit-btn">Create</button>
+          </div>
+      </form>
+  </div>
+</div>
+
 
           <!-- People Tab -->
           <div id="peopleTab" class="content-tab">
@@ -178,7 +220,7 @@
             <div class="people-section">
               <h2>Students</h2>
               <div id="studentsList" class="people-list"></div>
-            </div>
+            </div>  
           </div>
 
           <!-- Grades Tab -->
@@ -191,7 +233,7 @@
 
     <!-- Invite Modal -->
     <div id="inviteModal" class="modal">
-      <div class="modal-content">
+      <div class="modal-content"  >
         <div class="modal-header">
           <h2>Invite people</h2>
           <span class="close material-icons">close</span>

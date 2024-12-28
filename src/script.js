@@ -219,18 +219,48 @@ async function handleDeleteClass(classId) {
     showLoading(false);
   }
 }
-
+// script.js
 function updateUIForAuth(user) {
-  if (user) {
-    const userName = document.getElementById("userName");
-    const userEmail = document.getElementById("userEmail");
-    if (userName) userName.textContent = user.displayName || user.email;
-    if (userEmail) userEmail.textContent = user.email;
+  // Get all required elements
+  const profileSection = document.getElementById('profileSection');
+  const userNameElement = document.getElementById('userName');
+  const userEmailElement = document.getElementById('userEmail');
+  const signOutBtn = document.getElementById('signOutBtn');
+  const profileImage = document.getElementById('profileImage');
+  const dropdownProfileImg = document.getElementById('dropdownProfileImg');
 
-    signInBtn.style.display = "none";
-    signOutBtn.style.display = "block";
+  // Check if elements exist before updating
+  if (user) {
+      // Update profile section if it exists
+      if (profileSection) {
+          profileSection.style.display = 'flex';
+      }
+
+      // Update user name if element exists
+      if (userNameElement) {
+          userNameElement.textContent = user.displayName || user.email;
+      }
+
+      // Update user email if element exists
+      if (userEmailElement) {
+          userEmailElement.textContent = user.email;
+      }
+
+      // Update profile images if they exist
+      if (profileImage || dropdownProfileImg) {
+          const photoURL = user.photoURL || '../images/unnamed.png';
+          if (profileImage) profileImage.src = photoURL;
+          if (dropdownProfileImg) dropdownProfileImg.src = photoURL;
+      }
+
+  } else {
+      // Handle logged out state
+      if (profileSection) {
+          profileSection.style.display = 'none';
+      }
   }
 }
+
 
 // Class Management
 function generateClassCode() {
