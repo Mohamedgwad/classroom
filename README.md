@@ -1,6 +1,7 @@
 # Classroom Web Application 
 
 The Classroom Project is a web-based application designed to facilitate interaction between students and instructors. This platform allows for class creation, management, and login features such as Email and Google authentication.
+
 [Visit the Project](https://classroomsm.freewebhostmost.com/)
 
 ## Features
