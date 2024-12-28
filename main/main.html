@@ -48,6 +48,7 @@
 
       <div class="logo">
         <img
+          href="main.html"
           class="logop"
           src="../images/86dd2927-11ea-4f1b-a8b2-cdf238b9dd26.png"
           alt="Logo"
@@ -56,8 +57,6 @@
           <a href="main.html" class="place-link">Classroom</a>
         </p>
       </div>
-
-
 
       <div class="apps">
         <img class="apps" src="../images/al-icon.png" alt="Apps" />
@@ -68,55 +67,17 @@
         <div class="profile-image-container">
           <img
             class="namelogo-img loading"
-            src="/image/unnamed.png"
+            src="../images/unnamed.png"
             alt="Profile"
             id="profileImage"
             referrerpolicy="no-referrer"
           />
         </div>
-        <!-- <div class="profile-dropdown" id="profileDropdown">
-          <div class="profile-header">
-            <div class="dropdown-image-container">
-              <img
-                src="/image/unnamed.png"
-                alt="Profile"
-                class="dropdown-profile-img loading"
-                id="dropdownProfileImg"
-                referrerpolicy="no-referrer"
-              />
-            </div>
-            <div class="profile-info">
-              <div id="userName">Not signed in</div>
-              <div id="userEmail"></div>
-            </div>
-          </div>
-          <div class="dropdown-divider"></div>
-          <div class="theme-switch-container">
-            <label class="theme-switch" for="checkbox">
-              <input type="checkbox" id="checkbox" />
-              <div class="slider round">
-                <span class="material-icons light">light_mode</span>
-                <span class="material-icons dark">dark_mode</span>
-              </div>
-            </label>
-            <span>Dark theme</span>
-          </div>
-          <div class="dropdown-divider"></div>
-          <button id="signInBtn" class="dropdown-item">
-            <span class="material-icons">login</span>
-            <span>Sign in</span>
-          </button>
-          <button id="signOutBtn" class="dropdown-item" style="display: none">
-            <span class="material-icons">logout</span>
-            <span>Sign out</span>
-          </button>
-        </div> -->
-
         <div class="profile-dropdown" id="profileDropdown">
           <div class="profile-header">
             <div class="dropdown-image-container">
               <img
-                src="/image/unnamed.png"
+                src="../images/unnamed.png"
                 alt="Profile"
                 class="dropdown-profile-img loading"
                 id="dropdownProfileImg"
@@ -128,9 +89,7 @@
               <div id="userEmail"></div>
             </div>
           </div>
-        
           <div class="dropdown-divider"></div>
-        
           <div class="theme-switch-container">
             <label class="theme-switch" for="checkbox">
               <input type="checkbox" id="checkbox" />
@@ -141,21 +100,16 @@
             </label>
             <span>Dark theme</span>
           </div>
-        
           <div class="dropdown-divider"></div>
-        
           <button id="signInBtn" class="dropdown-item">
             <span class="material-icons">login</span>
             <span>Sign in</span>
           </button>
-        
           <button id="signOutBtn" class="dropdown-item" style="display: none">
             <span class="material-icons">logout</span>
             <span>Sign out</span>
           </button>
         </div>
-        
-        
       </div>
     </div>
 
@@ -193,7 +147,7 @@
           <h2>Create class</h2>
           <span class="close material-icons">close</span>
         </div>
-        <form id="squareForm">
+        <form id="squareForm" style="width: 445px">
           <div class="form-group">
             <label for="className">Class name (required)</label>
             <input
@@ -245,6 +199,7 @@
     </div>
 
     <!-- Modal for Joining Class -->
+    <!-- In your join class modal -->
     <div id="joinClassModal" class="modal">
       <div class="modal-content">
         <div class="modal-header">
@@ -257,10 +212,10 @@
             <input
               type="text"
               id="classCode"
-              name="classCode"
-              required
-              placeholder="Enter class code"
+              required=""
               maxlength="7"
+              placeholder="Enter class code"
+              style="width: 445px"
             />
             <div class="form-hint">Ask your teacher for the class code</div>
             <div class="form-error" id="joinClassError"></div>
@@ -294,24 +249,23 @@
     </div>
 
     <!-- Delete Confirmation Dialog -->
-<!-- Delete Confirmation Dialog -->
-<div id="deleteDialog" class="modal">
-    <div class="modal-content confirm-dialog">
+    <!-- Delete Confirmation Dialog -->
+    <div id="deleteDialog" class="modal">
+      <div class="modal-content confirm-dialog">
         <div class="modal-header">
-            <h3>Delete class?</h3>
-            <span class="close material-icons">close</span>
+          <h3>Delete class?</h3>
+          <span class="close material-icons">close</span>
         </div>
         <div class="modal-body">
-            <p>This class and all its contents will be permanently deleted.</p>
-            <p>This action cannot be undone.</p>
+          <p>This class and all its contents will be permanently deleted.</p>
+          <p>This action cannot be undone.</p>
         </div>
         <div class="dialog-actions">
-            <button class="cancel-btn">Cancel</button>
-            <button class="delete-btn">Delete</button>
+          <button class="cancel-btn">Cancel</button>
+          <button class="delete-btn">Delete</button>
         </div>
+      </div>
     </div>
-</div>
-
 
     <!-- Loading Overlay -->
     <div id="loadingOverlay" class="loading-overlay">
@@ -352,6 +306,6 @@
     </script>
 
     <!-- Main Script -->
-    <script type="module" src="script.js"></script>
+    <script type="module" src="../src/script.js"></script>
   </body>
 </html>
