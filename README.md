@@ -37,10 +37,6 @@ Make sure you have the following tools installed on your system:
 
 ### Steps
 
-Sure! Here's the updated version with the two separate steps for cloning the repository:
-
----
-
 ### 1. **Clone the Repository**
 
 To clone the repository to your local machine, use the following command:
