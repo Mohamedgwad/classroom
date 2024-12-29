@@ -5,18 +5,19 @@ The Classroom Project is a web-based application designed to facilitate interact
 [Visit the Project](https://classroomsm.freewebhostmost.com/)
 ## Features
 
-- **Dark Mode**: Provides a user-friendly interface in low-light environments.  
-- **Login and Register with Email**: Allows users to log in securely using their email and password.  
+- **Dark Mode**: Provides a user-friendly interface in low-light environments.
+- **Login and Register with Email**: Allows users to log in securely using their email and password.
 - **Login and Register with Google**: Enables quick login using Google authentication.
-- **Forgot Password**: Allows users to reset their password via email if they forget it.   
-- **Create Class**: Teachers or administrators can create virtual classes for easy collaboration.  
-- **Join Class**: Students can join classes using a unique class code.  
-- **Make Classwork**: Teachers can create assignments and other classwork activities for students.  
-- **Submit Assignment**: Students can submit their assignments directly through the platform.  
-- **Add Grades**: Teachers can evaluate submissions and assign grades to students.  
-- **Announcements**: Teachers can post announcements to notify class participants about important updates.  
-- **Upgrade to Teacher**: Users cangranted teacher privileges to create classes, assign classwork, and manage class activities.
-- **announcements realtime update**:announcements are updated in real-time, so there are no missing classes. 
+  - **Seamless Account Integration**: Whether you log in using Google or email, you access the same account.
+- **Forgot Password**: Allows users to reset their password via email if they forget it.
+- **Create Class**: Teachers or administrators can create virtual classes for easy collaboration.
+- **Join Class**: Students can join classes using a unique class code.
+- **Make Classwork**: Teachers can create assignments and other classwork activities for students.
+- **Submit Assignment**: Students can submit their assignments directly through the platform.
+- **Add Grades**: Teachers can evaluate submissions and assign grades to students.
+- **Announcements**: Teachers can post announcements to notify class participants about important updates.
+- **Real-time Announcements**: Announcements are updated in real time, ensuring no participant misses important updates.
+- **Upgrade to Teacher**: Users can be granted teacher privileges to create classes, assign classwork, and manage class activities.
 
 ## Languages Used
 
