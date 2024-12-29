@@ -53,11 +53,11 @@ cd classroom
 
 ---
 
-2. **Navigate to the Project Directory**
+### 2. **Navigate to the Project Directory**
 
    After cloning, open the project directory in your terminal or command prompt.
 
-3. **Install Dependencies**
+### 3. **Install Dependencies**
 
    Depending on your project setup, install the necessary dependencies:
 
@@ -67,7 +67,7 @@ cd classroom
      npm install
      ```
 
-4. **Start the Project**
+### 4. **Start the Project**
 
    To run the project, you can serve the static files using one of the following methods:
 
