@@ -6,21 +6,23 @@ The Classroom Project is a web-based application designed to facilitate interact
 
 ## Features
 
-- **Dark Mode**: Provides a user-friendly interface in low-light environments.
-- **Login and Register with Email**: Allows users to log in securely using their email and password.
-- **Login and Register with Google**: Enables quick login using Google authentication.
-  - **Seamless Account Integration**: Whether you log in using Google or email, you access the same account.
-- **Forgot Password**: Allows users to reset their password via email if they forget it.
-- **Create Class**: Teachers or administrators can create virtual classes for easy collaboration.
-- **Join Class**: Students can join classes using a unique class code.
-- **Make Classwork**: Teachers can create assignments and other classwork activities for students.
-- **Submit Assignment**: Students can submit their assignments directly through the platform.
-- **Add Grades**: Teachers can evaluate submissions and assign grades to students.
-- **Announcements**: Teachers can post announcements to notify class participants about important updates.
-- **Real-time Announcements**: Announcements are updated in real time, ensuring no participant misses important updates.
-- **Upgrade to Teacher**: Users can be granted teacher privileges to create classes, assign classwork, and manage class activities.
-- **View Members Count**: Class creators and members can view the total number of participants (students and teachers) in each class.
-- **Hosting**: Classes, assignments, and activities are hosted [Here](https://classroomsm.freewebhostmost.com/)
+1.  **Dark Mode**: Provides a user-friendly interface in low-light environments.  
+2.  **Login and Register with Email**: Allows users to log in securely using their email and password.  
+3.  **Login and Register with Google**: Enables quick login using Google authentication.  
+4.  **Seamless Account Integration**: Whether you log in using Google or email, you access the same account.  
+5.  **Forgot Password**: Allows users to reset their password via email if they forget it.  
+6.  **Create Class**: Teachers or administrators can create virtual classes for easy collaboration.  
+7.  **Join Class**: Students can join classes using a unique class code.  
+8.  **Make Assignments**: Teachers can create assignments and other classwork activities for students.  
+9.  **Submit Assignment**: Students can submit their assignments directly through the platform.  
+10. **Add Grades**: Teachers can evaluate submissions and assign grades to students.  
+11. **Announcements**: Teachers can post announcements to notify class participants about important updates.  
+12. **Real-time Announcements**: Announcements are updated in real time, ensuring no participant misses important updates.  
+13. **Delete Announcements**: Teachers can delete announcements when no longer needed.  
+14. **Upgrade to Teacher**: Users can be granted teacher privileges to create classes, assign classwork, and manage class activities.  
+15. **View Members Count**: Class creators and members can view the total number of participants (students and teachers) in each class.  
+16. **Hosting**: Classes, assignments, and activities are hosted [here](https://classroomsm.freewebhostmost.com/).  
+
 
 ## Languages Used
 
@@ -177,3 +179,5 @@ We welcome contributions! To contribute to this project, please follow these ste
 6. **Submit a Pull Request:**
    - Go to the original repository and open a pull request to merge your changes.
 ---
+                  
+  `````````````````````````````````````````````````````````````````````````````````````````````````````````````**By Ahmad Shaker and Mohamed Gwad S&M Group**
