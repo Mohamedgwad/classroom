@@ -1,29 +1,20 @@
-# Classroom Web Application 
+# Classroom Web Application
 
 The Classroom Project is a web-based application designed to facilitate interaction between students and instructors. This platform allows for class creation, management, and login features such as Email and Google authentication.
 
-[Visit the Project](https://classroomsm.freewebhostmost.com/)
-
 ## Features
 
-- **Dark Mode**: Provides a user-friendly interface in low-light environments.  
-- **Login and Register with Email**: Allows users to log in securely using their email and password.  
-- **Login and Register with Google**: Enables quick login using Google authentication.
-- **Forgot Password**: Allows users to reset their password via email if they forget it.   
-- **Create Class**: Teachers or administrators can create virtual classes for easy collaboration.  
-- **Join Class**: Students can join classes using a unique class code.  
-- **Make Classwork**: Teachers can create assignments and other classwork activities for students.  
-- **Submit Assignment**: Students can submit their assignments directly through the platform.  
-- **Add Grades**: Teachers can evaluate submissions and assign grades to students.  
-- **Announcements**: Teachers can post announcements to notify class participants about important updates.  
-- **Upgrade to Teacher**: Users cangranted teacher privileges to create classes, assign classwork, and manage class activities.
-- **announcements realtime update**:announcements are updated in real-time, so there are no missing classes. 
+- Dark Mode
+- Login with Email
+- Login with Google
+- Create Class
+- Join Class
 
 ## Languages Used
 
-- **HTML**
 - **CSS**
 - **JavaScript**
+- **HTML**
 
 ## Installation
 
@@ -118,32 +109,17 @@ Here’s the directory structure for your reference:
 ```
 classroom/
 ├── auth/
-│   ├── auth.js               # Handles user authentication logic
-│   ├── firebase-config.js    # Firebase authentication configuration
-│   ├── login.html            # Login page interface
-│   ├── login.js              # Login page functionality
-│   ├── register.html         # Registration page interface
-│   └── register.js           # Registration page functionality
-├── images/                   # Folder containing image assets
-│   ├── 86dd2927-11ea-4f1b-a8b2-cdf2388....png 
-│   ├── al-icon.png          
-│   ├── arrow-point-to-right.png 
-│   ├── google-icon.png      
-│   ├── interface_12383011.png 
-│   ├── toppng.com-menu-icon-png-3-line....png 
-│   └── unnamed.png                            
+│   ├── firebase-config.js   # Firebase authentication configuration
+│   ├── login.html           # Login page
+│   ├── login.js             # Login page functionality
+│   ├── register.html        # Registration page
+│   └── register.js          # Registration page functionality
 ├── main/
-│   ├── class.html            # Classroom page for managing classes
-│   ├── main.html             # Main page of the application
-├── src/
-│   ├── class.js              # JavaScript for classroom management functionality
-│   ├── index.js              # Core JavaScript for application initialization
-│   ├── script.js             # Additional scripts for main functionality
-├── styles/
-│   ├── class.css             # CSS styling for the classroom page
-│   ├── style.css             # General CSS styling for the application
-├── index.html                # Main entry point of the application
-└── README.md                 # Documentation for the project
+│   ├── main.html            # Main page of the application
+│   └── script.js            # JavaScript for main functionality
+└── styles/
+│    └── style.css            # CSS styling for the application
+└── index.html               # Main entry point of the application
 ```
 
 ## Usage
