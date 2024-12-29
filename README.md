@@ -3,6 +3,7 @@
 The Classroom Project is a web-based application designed to facilitate interaction between students and instructors. This platform allows for class creation, management, and login features such as Email and Google authentication.
 
 [Visit the Project](https://classroomsm.freewebhostmost.com/)
+
 ## Features
 
 - **Dark Mode**: Provides a user-friendly interface in low-light environments.
@@ -18,6 +19,8 @@ The Classroom Project is a web-based application designed to facilitate interact
 - **Announcements**: Teachers can post announcements to notify class participants about important updates.
 - **Real-time Announcements**: Announcements are updated in real time, ensuring no participant misses important updates.
 - **Upgrade to Teacher**: Users can be granted teacher privileges to create classes, assign classwork, and manage class activities.
+- **View Members Count**: Class creators and members can view the total number of participants (students and teachers) in each class.
+- **Hosting**: Classes, assignments, and activities are hosted [Here](https://classroomsm.freewebhostmost.com/)
 
 ## Languages Used
 
