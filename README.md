@@ -180,4 +180,7 @@ We welcome contributions! To contribute to this project, please follow these ste
    - Go to the original repository and open a pull request to merge your changes.
 ---
                   
-  `````````````````````````````````````````````````````````````````````````````````````````````````````````````**By Ahmad Shaker and Mohamed Gwad S&M Group**
+<p align="center">
+  <strong>By Ahmad Shaker and Mohamed Gwad</strong><br>
+  <strong>S&M Group</strong>
+</p>
