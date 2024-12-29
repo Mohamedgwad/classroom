@@ -16,7 +16,8 @@ The Classroom Project is a web-based application designed to facilitate interact
 - **Submit Assignment**: Students can submit their assignments directly through the platform.  
 - **Add Grades**: Teachers can evaluate submissions and assign grades to students.  
 - **Announcements**: Teachers can post announcements to notify class participants about important updates.  
-- **Upgrade to Teacher**: Users cangranted teacher privileges to create classes, assign classwork, and manage class activities.  
+- **Upgrade to Teacher**: Users cangranted teacher privileges to create classes, assign classwork, and manage class activities.
+- **announcements realtime update**:announcements are updated in real-time, so there are no missing classes. 
 
 ## Languages Used
 
